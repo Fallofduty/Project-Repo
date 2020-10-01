@@ -1,9 +1,5 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Dog {
 
     private static int idGenerator = 0; //  class specific will work as a id generator
@@ -25,7 +21,7 @@ public class Dog {
         this.sex = Character.toUpperCase(sex);
         this.foundHome = foundHome;
     }
-   // getters
+    // getters
     public boolean getHome(){ // simple getter to getHome() value
         return  this.foundHome;
     }
@@ -46,6 +42,7 @@ public class Dog {
     private String  setName (String name){
         return name.substring(0,1).toUpperCase() + name.substring(1);
     }
+    //cpatializaing word first letter
 
 
     @Override
@@ -55,17 +52,15 @@ public class Dog {
             home = "Yes";
 
         }else {
-            home = "NO";
+            home = "No";
         }
         return "|" +
-                "dogId=>" + dogId +
-                ", name=>'" + name + '\'' +
-                ", age=>" + age +
-                ", breed=>'" + breed + '\'' +
-                ", sex=>" + sex +
-                ", foundHome=>" + home +
+                "DogId=>" + dogId +
+                ", Name=>'" + name + '\'' +
+                ", Age=>" + age +
+                ", Breed=>'" + breed + '\'' +
+                ", Sex=>" + sex +
+                ", FoundHome=>" + home +
                 '|';
     }
-
-
 }
